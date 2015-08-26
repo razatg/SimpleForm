@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="@string/form_msg" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextFn"
+        android:layout_above="@+id/editTextLn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:text="Address"
+        android:ems="10"
+        android:id="@+id/editTextAdd"
+        android:focusable="false"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Last Name"
+        android:ems="10"
+        android:id="@+id/editTextLn"
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cricket"
+        android:id="@+id/checkBoxH1"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/editTextAdd"
+        android:layout_alignLeft="@+id/editTextAdd"
+        android:layout_alignStart="@+id/editTextAdd" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Art"
+        android:id="@+id/checkBoxH2"
+        android:layout_below="@+id/checkBoxH5"
+        android:layout_toRightOf="@+id/editTextAdd"
+        android:layout_toEndOf="@+id/editTextAdd" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:id="@+id/checkBoxH3"
+        android:layout_below="@+id/checkBoxH5"
+        android:layout_alignLeft="@+id/checkBoxH5"
+        android:layout_alignStart="@+id/checkBoxH5" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dance"
+        android:id="@+id/checkBoxH4"
+        android:layout_below="@+id/checkBoxH1"
+        android:layout_alignLeft="@+id/checkBoxH1"
+        android:layout_alignStart="@+id/checkBoxH1" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleeping"
+        android:id="@+id/checkBoxH5"
+        android:layout_alignTop="@+id/checkBoxH1"
+        android:layout_alignRight="@+id/editTextAdd"
+        android:layout_alignEnd="@+id/editTextAdd" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editTextAdd"
+        android:layout_alignStart="@+id/editTextAdd"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/radioButtonFemale"
+            android:layout_below="@+id/editText3"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_marginTop="37dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Malle"
+            android:id="@+id/radioButtonMale"
+            android:layout_alignTop="@+id/radioButtonFemale"
+            android:layout_alignRight="@+id/checkBoxH1"
+            android:layout_alignEnd="@+id/checkBoxH1" />
+    </RadioGroup>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
