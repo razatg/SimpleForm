@@ -19,7 +19,8 @@ public class MainActivity extends Activity implements View.OnClickListener,Radio
     private CheckBox checkBoxH1, checkBoxH2, checkBoxH3, checkBoxH4, checkBoxH5;
     private RadioGroup radioGroup;
     private Button submit;
-
+    private  String chkTxt;
+    private String radioTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,20 +50,26 @@ public class MainActivity extends Activity implements View.OnClickListener,Radio
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        String chkTxt = compoundButton.getText().toString();
+        chkTxt = compoundButton.getText().toString();
 
     }
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
         RadioButton rButton = (RadioButton) findViewById(i);
-        String radioTxt = rButton.getText().toString();
+        radioTxt = rButton.getText().toString();
     }
 
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(MainActivity.this, GoTo.class);
-        intent.putExtra("chkTxtData",chkTxt);
+        Bundle bundle = new Bundle();
+        bundle.putString("fnData", editTextFn.getText().toString());
+        bundle.putString("lnData", editTextLn.getText().toString());
+        bundle.putString("addData", editTextAdd.getText().toString());
+        bundle.putString("chkTxtData",chkTxt);
+        bundle.putString("radioTxtData",radioTxt);
+        intent.putExtras(bundle);
         startActivity(intent);
 
     }
